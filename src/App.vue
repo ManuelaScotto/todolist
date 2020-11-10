@@ -20,7 +20,6 @@ body {
   background: url("https://images.unsplash.com/photo-1517229501771-68639c11e03d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
     no-repeat top center;
   background-size: cover;
-  height: 96vh;
 }
 #app {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

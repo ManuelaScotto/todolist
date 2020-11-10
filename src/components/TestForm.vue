@@ -5,13 +5,16 @@
     <h4>Il mio nome è: {{ name.charAt(0).toUpperCase() + name.slice(1) }}</h4>
     <h4>La mia email è : {{ email }}</h4>
     <br />
-    <p style="white-space: pre">{{ text }}</p>
+    <p style="overflow: auto">{{ text }}</p>
     <br />
     <ul>
       <h4>Ho conosciuto il tuo sito tramite:</h4>
       <li v-for="s in check" :key="s">{{ s }}</li>
     </ul>
     <h4>Sono {{ genre }} e il mio colore preferito è {{ color }}</h4>
+    <span :style="{ color: color }" class="material-icons">
+      emoji_emotions
+    </span>
   </section>
 </template>
 
@@ -43,8 +46,9 @@ h2 {
   border-bottom: 2px solid #c5ecfd;
 }
 .test h4 {
-  margin: 10px;
+  margin-top: 10px;
   padding: 5px;
+  line-height: 1.5;
 }
 .test p {
   height: 100px;
@@ -54,5 +58,9 @@ h2 {
 }
 li {
   list-style: none;
+  line-height: 1.5;
+}
+.material-icons {
+  font-size: 70px;
 }
 </style>
