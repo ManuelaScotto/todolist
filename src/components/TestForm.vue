@@ -12,8 +12,21 @@
       <li v-for="s in check" :key="s">{{ s }}</li>
     </ul>
     <h4>Sono {{ genre }} e il mio colore preferito è {{ color }}</h4>
-    <span :style="{ color: color }" class="material-icons">
+    <span
+      @click="change"
+      v-if="isActive"
+      :style="{ color: color }"
+      class="material-icons"
+    >
       emoji_emotions
+    </span>
+    <span
+      @click="change"
+      v-if="!this.isActive"
+      :style="{ color: color }"
+      class="material-icons"
+    >
+      insert_emoticon
     </span>
   </section>
 </template>
@@ -23,8 +36,12 @@ import { EventBus } from "../main.js";
 
 export default {
   name: "test",
+  data() {
+    return {
+      isActive: true
+    };
+  },
   props: ["name", "email", "text", ["check"], "genre", "color"],
-
   created() {
     EventBus.$on("eventName", v => (this.name = v));
     EventBus.$on("eventEmail", v => (this.email = v));
@@ -32,6 +49,11 @@ export default {
     EventBus.$on("eventCheck", v => (this.check = v));
     EventBus.$on("eventGenre", v => (this.genre = v));
     EventBus.$on("eventColor", v => (this.color = v));
+  },
+  methods: {
+    change() {
+      this.isActive = !this.isActive;
+    }
   }
 };
 </script>
@@ -62,5 +84,8 @@ li {
 }
 .material-icons {
   font-size: 70px;
+}
+.material-icons {
+  cursor: pointer;
 }
 </style>

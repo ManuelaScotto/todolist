@@ -33,6 +33,10 @@ export default {
 
 <style>
 .form {
+  background: url("https://images.unsplash.com/photo-1517229501771-68639c11e03d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+    no-repeat top center;
+  background-size: cover;
+  margin-top: 60px;
   display: flex;
   padding: 0 70px;
 }

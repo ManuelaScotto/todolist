@@ -16,17 +16,11 @@
   box-sizing: border-box;
   outline: none;
 }
-body {
-  background: url("https://images.unsplash.com/photo-1517229501771-68639c11e03d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-    no-repeat top center;
-  background-size: cover;
-}
 #app {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 20px;
 }
 a {
   text-decoration: none;
@@ -37,6 +31,17 @@ a {
 a:active,
 a:focus {
   color: darkcyan;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 41px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 41px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 41px -22px rgba(0, 0, 0, 0.75);
 }
 nav span {
   font-size: 1.8rem;

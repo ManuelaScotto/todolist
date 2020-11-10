@@ -165,7 +165,7 @@ select:focus,
 select:active {
   outline: none;
 }
-button {
+.input-fields button {
   display: block;
   margin: 10px auto;
   padding: 0.3em 1.2em;
