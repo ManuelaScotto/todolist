@@ -60,7 +60,7 @@ section {
     padding: 0 20px;
   }
   section {
-    margin: 10px;
+    margin: 30px 10px 10px;
   }
 }
 @media screen and (max-width: 686px) {
@@ -72,8 +72,8 @@ section {
   }
   section {
     width: 90%;
-    padding: 30px;
-    margin: 1px auto;
+    padding: 50px 30px;
+    margin: 0px auto 1px;
   }
 }
 @media screen and (max-width: 396px) {
@@ -82,7 +82,7 @@ section {
   }
   section {
     width: 100%;
-    padding: 10px;
+    padding: 50px 10px 10px;
   }
 }
 </style>

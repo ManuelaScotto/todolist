@@ -80,4 +80,34 @@ button:active {
   outline: none;
   border: none;
 }
+.newPost {
+  margin: 10px auto 30px;
+  -webkit-box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
+  width: 600px;
+}
+.newPost h3 {
+  background-color: darkgray;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 686px) {
+  .newPost {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 396px) {
+  .jumbo h1 {
+    padding-top: 170px;
+  }
+  .jumbo p {
+    padding: 10px;
+  }
+  button {
+    margin: 30px 5px;
+    font-size: 15px;
+  }
+}
 </style>
