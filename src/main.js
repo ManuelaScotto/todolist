@@ -4,7 +4,13 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
-export const EventBus = new Vue()
+export const EventBus = new Vue({
+  // methods: {
+  //   addPost(post) {
+  //     this.$emit('addPost', post)
+  //   }
+  // }
+})
 
 new Vue({
   router,

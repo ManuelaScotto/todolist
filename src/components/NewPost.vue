@@ -3,53 +3,44 @@
     <form action="">
       <h3>Inserisci i dati</h3>
       <h4>Titolo</h4>
-      <input v-model="newPost.title" type="text" />
+      <input v-model="post.title" type="text" />
       <h4>Testo</h4>
       <textarea
-        v-model="newPost.text"
+        v-model="post.text"
         name=""
         id=""
         cols="30"
         rows="10"
       ></textarea>
-      <button @click.prevent="save" type="submit">Salva</button>
+      <p v-if="success" class="success-message">
+        ✅ Nuovo Post aggiunto con successo
+      </p>
+      <button @click="save" type="submit">Salva</button>
     </form>
   </div>
 </template>
 
 <script>
-// import { EventBus } from "../main.js";
-// import axios from "axios";
-import db from "../../db.json";
+import { EventBus } from "../main";
 
 export default {
   name: "newPost",
   data() {
     return {
-      newPost: {
+      success: false,
+      post: {
         title: "",
-        text: ""
-      }
+        text: "",
+      },
     };
   },
   methods: {
     save() {
-      console.log(db.posts.length);
-      console.log(db.posts);
-      // EventBus.$emit("eventTitle", this.newPost.title);
-      // EventBus.$emit("eventText", this.newPost.text);
-      db.posts.push({
-        id: db.posts.length + 1,
-        title: this.newPost.title,
-        text: this.newPost.text
-      });
-      // const res = axios.post(`http://localhost:3000/posts`, this.newPosts);
-
-      // this.posts = res.data;
-      this.newPost.title = "";
-      this.newPost.text = "";
-    }
-  }
+      EventBus.$emit("addPost", this.post);
+      this.success = true;
+      setTimeout(() => (this.success = false), 3000);
+    },
+  },
 };
 </script>
 
@@ -70,5 +61,10 @@ h4 {
 }
 .newPost button {
   margin-top: 30px;
+}
+.success-message {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: darkgrey;
 }
 </style>

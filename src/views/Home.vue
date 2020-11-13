@@ -2,8 +2,7 @@
   <div class="home">
     <div class="jumbo">
       <div class="img"></div>
-      <h1>BENVENUTO NEL MIO SITO</h1>
-      <p>In questa pagina potrai creare tutti i post che vuoi!!</p>
+      <h1>HOME</h1>
       <button @click="post = 'newPost'">New Post</button>
       <button @click="post = 'list'">List Post</button>
     </div>
@@ -21,13 +20,13 @@ export default {
   name: "home",
   components: {
     NewPost,
-    List
+    List,
   },
   data() {
     return {
-      post: ""
+      post: "newPost",
     };
-  }
+  },
 };
 </script>
 
@@ -46,13 +45,13 @@ export default {
   color: black;
 }
 .jumbo h1 {
-  padding-top: 200px;
+  padding-top: 180px;
   font-size: 47px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 button {
   display: inline-block;
-  margin: 100px 30px 30px;
+  margin: 10px 30px 30px;
   padding: 0.3em 1.2em;
   font-weight: 600;
   font-size: 18px;
@@ -86,6 +85,7 @@ button:active {
   -moz-box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
   width: 600px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .newPost h3 {
   background-color: darkgray;
@@ -100,7 +100,8 @@ button:active {
 }
 @media screen and (max-width: 396px) {
   .jumbo h1 {
-    padding-top: 170px;
+    padding-top: 100px;
+    margin-bottom: 20px;
   }
   .jumbo p {
     padding: 10px;
